@@ -2,8 +2,8 @@ name: CI → Build, Scan, Push to Docker Hub & Deploy
 
 
 on:
-  push:
-    branches: [ "main" ]
+ 
+ push:    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -93,4 +93,3 @@ jobs:
             docker rm flask-hello || true
            
             docker run -d --name flask-hello --restart unless-stopped -p 80:5000 ${{ env.IMAGE_NAME }}:latest
- SSHSS
