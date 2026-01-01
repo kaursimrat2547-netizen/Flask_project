@@ -93,4 +93,3 @@ jobs:
             docker rm flask-hello || true
            
             docker run -d --name flask-hello --restart unless-stopped -p 80:5000 ${{ env.IMAGE_NAME }}:latest
-
